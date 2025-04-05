@@ -2,5 +2,5 @@ var http = require("http");
 
 http.createServer(function (req, res) {
   res.writeHead(200, {"content-type": "text/html"});
-  res.write("hola mundo");
-} )
+  res.end("hola mundo");
+}).listen(8080)
