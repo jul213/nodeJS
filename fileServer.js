@@ -8,7 +8,8 @@ http.createServer(function(req,res){
     var filename = "." + q.pathname;
     fs.readFile(filename, function(err,data){
         if (err){
-            res.writeHead(404, {"content-type": "text/html"})
+            res.writeHead(404, {"content-type": "text/html"});
+            return res.end("404 NO ENCONTRADO");
         }
 
 
