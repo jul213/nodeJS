@@ -16,3 +16,12 @@ var mailoptions = {
     subject: "enviando email por nodeJS",
     text: "es muy facil"
 }
+
+transporter.sendMail(mailoptions, function(err, info){
+    if (err){
+        console.log(err)
+    } else{
+        console.log("email enviado: " + info.response)
+    }
+
+})
