@@ -12,6 +12,9 @@ http.createServer(function(req,res){
             return res.end("404 NO ENCONTRADO");
         }
 
+        res.writeHead(200, {"content-type": "text/html"});
+        return res.end("200 ENCONTRADO");
+
 
     })
 })
